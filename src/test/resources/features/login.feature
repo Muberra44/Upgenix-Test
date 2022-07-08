@@ -8,6 +8,7 @@ Feature: Login feature
   Background:
     Given User is on the upgenix login page
 
+  @BRT-346
   Scenario Outline: Positive login scenario
     When User enter valid "<Username>" and valid "<Password>"
     And  User click to login button
@@ -19,7 +20,7 @@ Feature: Login feature
       | posmanager10@info.com   | posmanager   |
       | salesmanager10@info.com | salesmanager |
 
-
+  @BRT-347
   Scenario Outline: Negative login scenario
     When User enter "<Username>" and "<Password>"
     And  User click to login button
@@ -35,7 +36,7 @@ Feature: Login feature
       | posmanager&10           | 43*&         |
       | salesmanager10          | sales1       |
 
-
+  @BRT-348
   Scenario Outline:Negative login scenario with empty username and valid password
     When User enter "<Password>" and "<Username>"
     And  User click to login button
@@ -49,16 +50,16 @@ Feature: Login feature
       |              | posmanager34   |
       |              | salesmanager45 |
 
-
+  @BRT-349
   Scenario: User land on the 'reset password' page after clicking on the "Reset password" link
     When User click "Reset password" link
     Then User should see the title is "Reset password | Best solution for startups"
 
-
+  @BRT-350
   Scenario: User should see the password in bullet signs by default
     When User enter password ,should see the password in bullet signs by default
 
-
+  @BRT-351
   Scenario Outline:Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When User enter valid "<Username>" and "<Password>" press Enter Key
     Then User should see the title is "#Inbox - Odoo"

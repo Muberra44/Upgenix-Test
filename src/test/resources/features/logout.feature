@@ -8,12 +8,12 @@ Feature: Logout feature
   Background:
     Given User is on the upgenix home page
 
-
+    @BRT-353
   Scenario: Verify that User can log out and ends up in login page.
     Given User should be able click log out button and ends up in login page
     Then User should see the title is "Login | Best solution for startups"
 
-
+      @BRT-354
   Scenario:Verify that User can not go to the home page again by clicking the step back button after successfully logged out.
     Given User should be able click log out button and ends up in login page
     And User should be able to not go to the home page again by clicking the step back button
