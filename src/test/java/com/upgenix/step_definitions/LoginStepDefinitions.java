@@ -43,7 +43,7 @@ public class LoginStepDefinitions {
     @Then("User should see the title is {string}")
     public void user_should_see_the_title_is(String pageTitle) {
 
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(10);
         Assert.assertTrue(Driver.getDriver().getTitle().contains(pageTitle));
 
     }

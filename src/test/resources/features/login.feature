@@ -12,7 +12,7 @@ Feature: Login feature
   Scenario Outline: Positive login scenario
     When User enter valid "<Username>" and valid "<Password>"
     And  User click to login button
-    Then User should see the title is "#Inbox - Odoo"
+    Then User should see the title is "Odoo"
 
     Examples:
 
@@ -62,7 +62,7 @@ Feature: Login feature
   @BRT-351
   Scenario Outline:Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When User enter valid "<Username>" and "<Password>" press Enter Key
-    Then User should see the title is "#Inbox - Odoo"
+    Then User should see the title is "Odoo"
 
     Examples:
 
